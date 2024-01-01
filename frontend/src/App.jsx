@@ -9,7 +9,6 @@ function App() {
     .then((response)=>{
       setJokes(response.data)
     })
-    Wapas loda lassan
     .catch((err)=>{
       console.log(err)
     })
