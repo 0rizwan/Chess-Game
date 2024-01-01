@@ -8,7 +8,7 @@ function App() {
     axios.get(`http://127.0.0.1:3000/api/jokes`)
     .then((response)=>{
       console.log(jokes, "before")
-      console.log("")
+      console.log("loda lassan")
       setJokes(response.data)
     })
     .catch((err)=>{
