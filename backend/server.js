@@ -1,14 +1,16 @@
 import express from 'express';
 const app = express();
 import cors from 'cors';
-app.use(cors())
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res)=>{
-    res.send('This is home page')
-})
+app.get('/', (req, res) => {
+    res.send('This is home page');
+});
 
-app.get('/api/jokes', (req, res)=> {
+app.get('/api/jokes', (req, res) => {
     const Jokes = [
         {
             id: 1,
@@ -35,11 +37,11 @@ app.get('/api/jokes', (req, res)=> {
             title: "Joke five",
             content: "This is joke five"
         },
-    ]
+    ];
 
-    res.send(Jokes)
-})
+    res.send(Jokes);
+});
 
-app.listen(PORT,()=>{
-    console.log(`Server is running on http://localhost:${PORT}`)
-})
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [jokes, setJokes] = useState([])
   useEffect(()=>{
-    axios.post('https://ecom-site.cyclic.app/api/v1/get-all-products')
+    axios.get(`http://127.0.0.1:3000/api/jokes`)
     .then((response)=>{
       console.log(jokes, "before")
       console.log("")
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <h1>Jokes : {jokes.length}</h1>
+      <h1>Jokes : {jokes.length} jokes hai</h1>
       {
         jokes.map((joke, index)=>(
           <div key={joke.id}>
