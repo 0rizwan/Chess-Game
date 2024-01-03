@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(61, 60, 60)
+}
+
+.main {
+    border-radius: 6px;
+    /* background-color: rgb(72, 230, 230); */
+    height: 45rem;
+    margin: auto;
+    width: 45rem;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 95% 5%;
+
+}
+
+#numbers {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.4rem;
+}
+
+#alphabet {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.4rem;
+
+}
+
+#wking {
+    /* top: 600px; */
+
+}
+
+#board {
+    overflow: hidden;
+    /* height: 95%; */
+    border-radius: 6px;
+    /* width: 95%; */
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    /* background: url('./img/esma-q-MCC1g6Ziw-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+
+
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pieces {
+    cursor: grab;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    z-index: 5;
+
+}
+
+.skin {
+    background-color: rgb(239, 235, 235);
+    background-color: #e9edcc;
+}
+
+.green {
+    background-color: rgb(15, 15, 15);
+    background-color: #779954;
+
+}
